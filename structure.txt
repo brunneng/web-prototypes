@@ -1,0 +1,35 @@
+web-prototypes
+	structure.txt // Description of project files structure
+	<project>... // Directory with prototype project, for example: book-library (... meens - possible list of projects)
+		about.txt // Short description of project
+		requirements.txt // Requirements for current project, which should be implemented by all frameworks implementations
+						 // Every requirement has its own unique id, to be able reference to it from commit or another document
+						 // Current document has next structure:
+						 //	- short description of entities:
+						 //	<...>
+						 //	- functional requirements:
+						 //	<...>
+						 //	- not-functional requirements :
+						 //	<...>						 
+						
+		db // scripts for inititialization of database
+			clear.bat // drop scheme 
+			init.bat // create new scheme, tables, foreign keys etc, and init data
+			clear-init.bat  // call clear.bat and after init.bat
+			<same sh scripts>
+			sql // directory with sql scripts
+				clear.sql // drop scheme
+				init.sql // create new scheme, tables, foreign keys etc, and init data
+		<language>... // directory which contain implementations of current project only for specified programming language
+			<framework-based short name>... //  Implementation with some concreate set of fremeworks. By name of this directory
+											//	should be clear, which frameworks where used. For example "gwt".
+											//	Also possible to specify version of framework.
+				<project> // directory with project files
+				implemented.txt	// 	List of requirements from requirements.txt which was implemented for current set of frameworks
+				frameworks-libs.txt //  Detailed description of frameworks and their versions and libs, which where used.
+				build-all.bat 	// Script for full build. Should contain instructions for used, about required environment, for
+								// smooth build.
+				deploy.bat	//	Script, which deploy builded project on some web server. Should show info about what web server
+							//	is required or recomended.
+				build-all-deploy.bat // Call build-all.bat, and then deploy.bat.
+				<same sh scripts>
