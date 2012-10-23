@@ -13,13 +13,14 @@ web-prototypes
 						 //	<...>						 
 						
 		db // scripts for inititialization of database
-			clear.bat // drop scheme 
-			init.bat // create new scheme, tables, foreign keys etc, and init data
+			dbms.txt  // requirements for dbms system. (MySql should be enough for most projects)
+			clear.bat // clear all created data
+			init.bat // create tables, foreign keys etc, and init data
 			clear-init.bat  // call clear.bat and after init.bat
 			<same sh scripts>
 			sql // directory with sql scripts
-				clear.sql // drop scheme
-				init.sql // create new scheme, tables, foreign keys etc, and init data
+				clear.sql // clear all created data
+				init.sql // create tables, foreign keys etc, and init data
 		<language>... // directory which contain implementations of current project only for specified programming language
 			<framework-based short name>... //  Implementation with some concreate set of fremeworks. By name of this directory
 											//	should be clear, which frameworks where used. For example "gwt".
