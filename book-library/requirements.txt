@@ -1,0 +1,30 @@
+Entities: 
+Book
+- String name
+- Date publidationDate
+- List<Author> authors
+
+Author
+- String fullName
+- Date birthDate
+- Date dateOfDeath
+- List<Book> books
+----------------------------------------------------------------------------------------------------------------------
+
+Users:
+- Site admin. Login is not required.
+
+----------------------------------------------------------------------------------------------------------------------
+Functional requirements:
+FR-1 - search of book by fields: name, publication date, author
+FR-2 - search of authors by full name, birth date, dete of death, name of book
+FR-3 - add author (without books)
+FR-4 - add book, with specification of authors
+FR-5 - edit/delete book
+FR-6 - edit/delete author
+
+
+Not-functional requirements:
+NFR-1 - transactions support
+NFR-2 - when create/edit author: client side validation of birth date and date of death
+NFR-3 - when create/edit book: server validation, that publication date shouldn't be earlier than birth date of any author
